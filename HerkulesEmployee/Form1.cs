@@ -34,7 +34,12 @@ namespace HerkulesEmployee
 
         private void button1_Click(object sender, EventArgs e)
         {
+            login1.Visible = true;
+        }
 
+        private void login1_Load(object sender, EventArgs e)
+        {
+            login1.Visible = false;
         }
     }
 }
