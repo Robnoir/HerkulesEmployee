@@ -56,6 +56,8 @@ namespace HerkulesEmployee
                 MessageBox.Show("Something went wrong.");
             }
         }
+
+        // textBox1 = ID, textBox2 =? add hours, textBox3 = Remove
         private void button3_Click(object sender, EventArgs e) // UPDATE btn
         {
             MessageBox.Show("You've updated your work hours!");
@@ -70,6 +72,9 @@ namespace HerkulesEmployee
             MessageBox.Show("Here's your total Salary earned so far: ££");
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
