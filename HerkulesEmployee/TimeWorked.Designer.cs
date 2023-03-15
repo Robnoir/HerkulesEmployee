@@ -51,11 +51,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
-            this.label2.Location = new System.Drawing.Point(624, 35);
+            this.label2.Location = new System.Drawing.Point(210, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 21);
+            this.label2.Size = new System.Drawing.Size(491, 21);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Peekaboo";
+            this.label2.Text = "HERE YOU SEE YOUR WORK TIME IN A FORM OF A LIST! / DATAGRID";
             // 
             // dataGridView1
             // 
