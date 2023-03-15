@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace HerkulesEmployee
 {
     public partial class ReportTime : Form
     {
+        public static int reportTime;
+        public static int checkSalary;
+        
         public ReportTime()
         {
             InitializeComponent();
@@ -22,9 +26,21 @@ namespace HerkulesEmployee
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // OK btn, här skall du addera timmarna till din tidsbank/arbetade h
         {
-            
+            try
+            {
+                if (textBox1.Text != "")
+                {
+                    reportTime = Convert.ToInt32(textBox1.Text);
+                    checkSalary = reportTime * 200;
+                }
+                MessageBox.Show($"You've added {reportTime} Hours and you earned {checkSalary} Euros");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Add your work time in whole numbers.");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

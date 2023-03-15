@@ -12,6 +12,8 @@ namespace HerkulesEmployee
 {
     public partial class NewUser : Form
     {
+        public static string userName { get; set; } //idk man
+        public static int passWord { get; set; }
         public NewUser()
         {
             InitializeComponent();
@@ -22,9 +24,21 @@ namespace HerkulesEmployee
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //USELESS KOD, lade till något dock
         {
-
+            try
+            {
+                if (textBox1.Text != "" && textBox2.Text != "")
+                {
+                    userName = textBox1.Text;
+                    passWord = Convert.ToInt32(textBox2.Text);
+                }
+                MessageBox.Show($"Your username is {textBox1.Text} and Password is {textBox2.Text}.\r\n Don't tell anyone.");
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Only numbers are allowed in Password");
+            }
         }
 
         private void NewUser_Load(object sender, EventArgs e)
@@ -35,6 +49,16 @@ namespace HerkulesEmployee
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

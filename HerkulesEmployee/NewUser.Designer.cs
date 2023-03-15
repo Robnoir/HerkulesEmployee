@@ -44,9 +44,10 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
             this.label1.Location = new System.Drawing.Point(219, 159);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 47);
+            this.label1.Size = new System.Drawing.Size(168, 47);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Enter New Name";
+            this.label1.Text = "New User";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -55,9 +56,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
             this.label2.Location = new System.Drawing.Point(223, 225);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 21);
+            this.label2.Size = new System.Drawing.Size(48, 21);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Username";
+            this.label2.Text = "Email";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -86,6 +87,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 5;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button1
             // 

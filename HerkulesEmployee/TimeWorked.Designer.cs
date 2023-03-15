@@ -32,6 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,11 +53,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
-            this.label2.Location = new System.Drawing.Point(210, 30);
+            this.label2.Location = new System.Drawing.Point(248, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 21);
+            this.label2.Size = new System.Drawing.Size(275, 21);
             this.label2.TabIndex = 4;
-            this.label2.Text = "HERE YOU SEE WORKTAJM";
+            this.label2.Text = "YOU\'VE WORKED THIS MANY HOURS";
             // 
             // dataGridView1
             // 
@@ -66,7 +67,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(20, 59);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(681, 414);
+            this.dataGridView1.Size = new System.Drawing.Size(698, 414);
             this.dataGridView1.TabIndex = 5;
             // 
             // button2
@@ -84,12 +85,26 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
+            this.label3.Location = new System.Drawing.Point(19, 235);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(691, 21);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "YOU\'RE SUPPOSED TO SEE YOUR TIMES WORTH HERE! // REMOVE THIS LABEL // AND DATA mb" +
+    "y";
+            // 
             // TimeWorked
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(730, 499);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
@@ -109,5 +124,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
     }
 }

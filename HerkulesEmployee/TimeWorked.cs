@@ -12,6 +12,8 @@ namespace HerkulesEmployee
 {
     public partial class TimeWorked : Form
     {
+
+        public static int viewTime; //ADDERA så man kan kolla sina timmar
         public TimeWorked()
         {
             InitializeComponent();

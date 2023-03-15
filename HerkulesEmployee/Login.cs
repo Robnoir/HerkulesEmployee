@@ -26,5 +26,10 @@ namespace HerkulesEmployee
         {
             //HEJ
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
