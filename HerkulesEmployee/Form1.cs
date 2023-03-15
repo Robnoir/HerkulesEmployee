@@ -14,7 +14,7 @@ namespace HerkulesEmployee
 {
     public partial class Form1 : Form
     {
-        MySqlConnection conn;
+        MySqlConnection conn; // BORDE EGEGENLIGEN GÖRA EN KLASS vid namn DATABAS så jag kan kalla på klassen t ex dataBase.GetData(); istället för att skriva om koden om och om igen (följer ej DRY rekommendationer XD)
         MySqlDataReader reader;
         public Form1()
         {
