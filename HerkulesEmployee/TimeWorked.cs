@@ -24,11 +24,11 @@ namespace HerkulesEmployee
             string server = "localhost";
             string database = "herkules";
             string uid = "root";
-            string password = "mamamia";
+            string password = "mamamia";// <------ database password here
 
             string connectstring = $"SERVER={server};DATABASE={database};UID={uid};PASSWORD={password};";
             conn = new MySqlConnection(connectstring);
-        }
+        }// <------ database password here
 
         private void button2_Click(object sender, EventArgs e)
         {
