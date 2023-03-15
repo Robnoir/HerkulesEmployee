@@ -35,7 +35,7 @@ namespace HerkulesEmployee
                     reportTime = Convert.ToDouble(textBox1.Text);
                     checkSalary = reportTime * 200;
                 }
-                MessageBox.Show($"You've added {reportTime} Hours and you earned {checkSalary} Euros");
+                MessageBox.Show($"You've added {reportTime} Hours and you earned" +Convert.ToDouble(checkSalary)+ "Euros");
             }
             catch (Exception)
             {
