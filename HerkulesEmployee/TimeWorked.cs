@@ -56,15 +56,20 @@ namespace HerkulesEmployee
                 MessageBox.Show("Something went wrong.");
             }
         }
-
+        private void button3_Click(object sender, EventArgs e) // UPDATE btn
+        {
+            MessageBox.Show("You've updated your work hours!");
+        }
         private void button4_Click(object sender, EventArgs e) // SEMESTER btn
         {
-
+            MessageBox.Show("Here's your total Semester / annual leave days: <3");
         }
 
         private void button5_Click(object sender, EventArgs e) // SALARY TOTAL or something
         {
-
+            MessageBox.Show("Here's your total Salary earned so far: ££");
         }
+
+
     }
 }
