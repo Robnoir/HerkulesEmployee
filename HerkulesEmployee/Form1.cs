@@ -17,7 +17,7 @@ namespace HerkulesEmployee
             InitializeComponent();
         }
         private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        private void openChildForm(Form childForm) // kan öppna andra windows via panelen med denna kod
         {
             if (activeForm != null)
                 activeForm.Close();
@@ -45,11 +45,6 @@ namespace HerkulesEmployee
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            login1.Visible = true;
-        }
-
         private void login1_Load(object sender, EventArgs e)
         {
             login1.Visible = true;
@@ -67,9 +62,9 @@ namespace HerkulesEmployee
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            login1.Visible = true;
+            login1.Visible = true; // Don't understand this Rob. -- Login : UserControl ?
         }
-
+        #region MENYBUTTONS OPENCHILDFÖRMS
         private void button2_Click(object sender, EventArgs e)
         {
             openChildForm(new UserSettings()); //öppnar settings
@@ -77,17 +72,18 @@ namespace HerkulesEmployee
 
         private void button7_Click(object sender, EventArgs e)
         {
-            openChildForm(new Schedule());
+            openChildForm(new Schedule()); //öppnar Schedule
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            openChildForm(new TimeWorked());
+            openChildForm(new TimeWorked()); //öppnar Tid jobbat
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            openChildForm(new NewUser());
+            openChildForm(new NewUser()); //öppnar skapaUser
         }
+        #endregion
     }
 }
