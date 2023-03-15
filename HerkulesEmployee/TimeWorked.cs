@@ -39,7 +39,7 @@ namespace HerkulesEmployee
         {
             try
             {
-                string query = $"SELECT herkules_id AS ID, herkules_user AS USER, herkules_hour AS Hour, herkules_pay AS Payment FROM herkules";
+                string query = "SELECT herkules_id AS ID, herkules_user AS USER, herkules_hour AS Hour, herkules_pay AS Payment FROM herkules";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 MySqlDataAdapter da = new MySqlDataAdapter();
@@ -51,10 +51,20 @@ namespace HerkulesEmployee
                 reader = cmd.ExecuteReader();
 
                 conn.Close();
-                MessageBox.Show("Don't tell anyone.");
+                MessageBox.Show("Load Data");
             }catch (Exception) {
                 MessageBox.Show("Something went wrong.");
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e) // SEMESTER btn
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e) // SALARY TOTAL or something
+        {
+
         }
     }
 }
