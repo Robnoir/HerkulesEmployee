@@ -55,19 +55,19 @@ namespace HerkulesEmployee
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            openChildForm(new ReportTime()); // Öppnar reporttime
-        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            login1.Visible = true; // Don't understand this Rob. -- Login : UserControl ?
+            login1.Visible = true; // Don't understand this Rob. -- "Login : UserControl" -- where ist das usercontrol?
         }
-        #region MENYBUTTONS OPENCHILDFÖRMS
+        #region MENYBUTTONS OPENCHILDFÖRMS, OPEN OTHER WINDÖWS
         private void button2_Click(object sender, EventArgs e)
         {
             openChildForm(new UserSettings()); //öppnar settings
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ReportTime()); // Öppnar reporttime
         }
 
         private void button7_Click(object sender, EventArgs e)

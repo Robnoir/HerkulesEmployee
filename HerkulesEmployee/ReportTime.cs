@@ -13,8 +13,8 @@ namespace HerkulesEmployee
 {
     public partial class ReportTime : Form
     {
-        public static int reportTime;
-        public static int checkSalary;
+        public static double reportTime;
+        public static double checkSalary;
         
         public ReportTime()
         {
@@ -32,7 +32,7 @@ namespace HerkulesEmployee
             {
                 if (textBox1.Text != "")
                 {
-                    reportTime = Convert.ToInt32(textBox1.Text);
+                    reportTime = Convert.ToDouble(textBox1.Text);
                     checkSalary = reportTime * 200;
                 }
                 MessageBox.Show($"You've added {reportTime} Hours and you earned {checkSalary} Euros");
