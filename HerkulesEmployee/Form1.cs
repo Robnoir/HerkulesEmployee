@@ -15,7 +15,6 @@ namespace HerkulesEmployee
     public partial class Form1 : Form
     {
         MySqlConnection conn; // BORDE EGEGENLIGEN GÖRA EN KLASS vid namn DATABASså jag kan kalla på klassen t ex dataBase.GetData(); istället för att skriva // CONNECT TO DATABASE om och om igen (följer ej DRY rekommendationer XD) i varje Form
-
         MySqlDataReader reader;
         public Form1()
         {
