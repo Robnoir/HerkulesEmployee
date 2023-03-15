@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,20 @@ namespace HerkulesEmployee
 {
     public partial class NewUser : Form
     {
+        MySqlConnection conn;
+        MySqlDataReader reader;
         public static string userName { get; set; } //idk man
-        public static int passWord { get; set; }
+        public static double passWord { get; set; }
         public NewUser()
         {
             InitializeComponent();
+            string server = "localhost";
+            string database = "herkules";
+            string uid = "root";
+            string password = "mamamia";
+
+            string connectstring = $"SERVER={server};DATABASE={database};UID={uid};PASSWORD={password};";
+            conn = new MySqlConnection(connectstring);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -31,7 +41,20 @@ namespace HerkulesEmployee
                 if (textBox1.Text != "" && textBox2.Text != "")
                 {
                     userName = textBox1.Text;
-                    passWord = Convert.ToInt32(textBox2.Text);
+                    passWord = Convert.ToDouble(textBox2.Text);
+                    string query = $"INSERT INTO `herkules` (`herkules_user`, `herkules_password`) VALUES ('{userName}', '{passWord}')";
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    /*/MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;/*/
+                    conn.Open();
+
+                    reader = cmd.ExecuteReader();
+
+                    conn.Close();
                 }
                 MessageBox.Show($"Your username is {textBox1.Text} and Password is {textBox2.Text}.\r\n Don't tell anyone.");
             }

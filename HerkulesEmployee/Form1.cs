@@ -7,14 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace HerkulesEmployee
 {
     public partial class Form1 : Form
     {
+        MySqlConnection conn;
+        MySqlDataReader reader;
         public Form1()
         {
             InitializeComponent();
+
+            // CONNECT TO DATABASE
+            string server = "localhost";
+            string database = "herkules";
+            string uid = "root";
+            string password = "mamamia";
+
+            string connectstring = $"SERVER={server};DATABASE={database};UID={uid};PASSWORD={password};";
+            conn = new MySqlConnection(connectstring);
         }
         private Form activeForm = null;
         private void openChildForm(Form childForm) // kan öppna andra windows via panelen med denna kod
@@ -30,7 +43,7 @@ namespace HerkulesEmployee
             childForm.BringToFront();
             childForm.Show();
         }
-            private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             login1.Visible = true;
         }
@@ -48,6 +61,7 @@ namespace HerkulesEmployee
         private void login1_Load(object sender, EventArgs e)
         {
             login1.Visible = true;
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
