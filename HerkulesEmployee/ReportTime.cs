@@ -71,5 +71,15 @@ namespace HerkulesEmployee
         {
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You've checked in!");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You've checked out...");
+        }
     }
 }
