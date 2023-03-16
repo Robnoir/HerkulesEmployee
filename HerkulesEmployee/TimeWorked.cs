@@ -39,7 +39,7 @@ namespace HerkulesEmployee
         {
             try
             {
-                string query = "SELECT herkules_id AS ID, herkules_user AS USER, herkules_hour AS Hour, herkules_pay AS Payment FROM herkules";
+                string query = "SELECT herkules_id AS ID, herkules_user AS USER, herkules_hour AS Hour, herkules_pay AS Payment, herkules_title AS Title, herkules_status AS Presence, herkules_vacation AS Vacation FROM herkules";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 MySqlDataAdapter da = new MySqlDataAdapter();
