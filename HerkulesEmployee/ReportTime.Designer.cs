@@ -124,7 +124,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(379, 181);
             this.button4.TabIndex = 9;
-            this.button4.Text = "STÄMPLA OUT ye boi";
+            this.button4.Text = "CHECK OUT";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
