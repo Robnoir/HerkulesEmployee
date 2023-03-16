@@ -81,5 +81,10 @@ namespace HerkulesEmployee
         {
             MessageBox.Show("You've checked out...");
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
