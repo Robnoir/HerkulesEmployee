@@ -92,9 +92,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
             this.label3.Location = new System.Drawing.Point(84, 287);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(556, 21);
+            this.label3.Size = new System.Drawing.Size(486, 21);
             this.label3.TabIndex = 9;
-            this.label3.Text = "SUPPOSED TO SEE YOUR TIMES WORTH! // REMOVE THIS LABEL // DATAGRID";
+            this.label3.Text = "SUPPOSED TO SEE YOUR TIMES WORTH! // REMOVE THIS LAJBEL //";
             // 
             // button1
             // 

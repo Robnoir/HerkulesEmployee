@@ -29,7 +29,7 @@ namespace HerkulesEmployee
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Now you're supposed to check with database if user + password match and you log in.");
         }
     }
 }
