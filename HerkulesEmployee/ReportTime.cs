@@ -19,6 +19,7 @@ namespace HerkulesEmployee
         MySqlDataReader reader;
         public static double reportTime { get; set; }
         public static double checkSalary { get; set; }
+        public static double vacation { get; set; } 
 
         public ReportTime()
         {
@@ -45,7 +46,8 @@ namespace HerkulesEmployee
                 {
                     reportTime = Convert.ToDouble(textBox1.Text);
                     checkSalary = reportTime * 200;
-                    string query = $"INSERT INTO `herkules`(`herkules_hour`, `herkules_pay`) VALUES ('{reportTime}', '{checkSalary}');";
+                    vacation = reportTime * 0.2;
+                    string query = $"INSERT INTO `herkules`(`herkules_hour`, `herkules_pay`, `herkules_vacation`) VALUES ('{reportTime}', '{checkSalary}', '{vacation}');";
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     /*/MySqlDataAdapter da = new MySqlDataAdapter();
@@ -59,8 +61,8 @@ namespace HerkulesEmployee
 
                     conn.Close();
                 }
-                MessageBox.Show($"You've added {reportTime} Hours and you earned" +Convert.ToDouble(checkSalary)+ "Euros");
-            }
+                MessageBox.Show($"You've added {reportTime} Hours and you earned " + Convert.ToDouble(checkSalary) + " Euros and received" + Convert.ToDouble(vacation)+" hours paid leave because we are incredible generous.");
+                }
             catch (Exception)
             {
                 MessageBox.Show("Add your work time in whole numbers.");

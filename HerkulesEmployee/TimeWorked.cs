@@ -39,7 +39,7 @@ namespace HerkulesEmployee
         {
             try
             {
-                string query = "SELECT herkules_id AS ID, herkules_user AS USER, herkules_hour AS Hour, herkules_pay AS Payment, herkules_title AS Title, herkules_status AS Presence, herkules_vacation AS Vacation FROM herkules";
+                string query = "SELECT herkules_id AS ID, herkules_user AS USER, herkules_hour AS HoursOfWork, herkules_pay AS Payment, herkules_title AS Title, herkules_status AS Presence, herkules_vacation AS HoursOfVacation FROM herkules";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 MySqlDataAdapter da = new MySqlDataAdapter();
@@ -103,7 +103,7 @@ namespace HerkulesEmployee
 
         private void button7_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bojan is not working today, he's out gambling");
+            MessageBox.Show("Mustafa is working\r\nKamphol is working\r\nBabushka is not working - she is playing poker with Bojan");
         }
     }
 }
