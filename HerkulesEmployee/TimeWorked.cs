@@ -100,5 +100,10 @@ namespace HerkulesEmployee
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bojan is not working today, he's out gambling");
+        }
     }
 }
