@@ -51,7 +51,6 @@ namespace HerkulesEmployee
                 reader = cmd.ExecuteReader();
 
                 conn.Close();
-                MessageBox.Show("Load Data");
             }catch (Exception) {
                 MessageBox.Show("Something went wrong.");
             }
@@ -60,19 +59,44 @@ namespace HerkulesEmployee
         // textBox1 = ID, textBox2 =? add hours, textBox3 = Remove
         private void button3_Click(object sender, EventArgs e) // UPDATE btn
         {
-            MessageBox.Show("You've updated your work hours!");
+            try
+            {
+                string query = "UPDATE herkules SET herkules_hour='"+textBox2.Text+"', herkules_pay='"+textBox3.Text+"' WHERE herkules_id='" + textBox1.Text + "'";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                da.SelectCommand = cmd;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+                conn.Open();
+                reader = cmd.ExecuteReader();
+
+                conn.Close();
+                MessageBox.Show("You've updated your work hours with your prefered hourly rate!");
+                button1_Click(sender, e);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong.");
+            }
         }
         private void button4_Click(object sender, EventArgs e) // SEMESTER btn
         {
-            MessageBox.Show("Here's your total Semester / annual leave days: <3");
+            MessageBox.Show("Here's your total Semester / annual leave days: Unfortunately this bötton doesn't work yet");
         }
 
         private void button5_Click(object sender, EventArgs e) // SALARY TOTAL or something
         {
-            MessageBox.Show("Here's your total Salary earned so far: ££");
+            MessageBox.Show("Here's your total Salary earned so far: (>^_^)>");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }

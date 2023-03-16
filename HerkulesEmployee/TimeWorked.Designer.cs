@@ -88,7 +88,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
-            this.label3.Location = new System.Drawing.Point(73, 333);
+            this.label3.Location = new System.Drawing.Point(76, 293);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(556, 21);
             this.label3.TabIndex = 9;
@@ -151,6 +151,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 14;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label2
             // 
@@ -172,9 +173,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
             this.label4.Location = new System.Drawing.Point(126, 383);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 21);
+            this.label4.Size = new System.Drawing.Size(78, 21);
             this.label4.TabIndex = 16;
-            this.label4.Text = "Add Hours";
+            this.label4.Text = "EditHours";
             // 
             // label5
             // 
@@ -184,9 +185,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
             this.label5.Location = new System.Drawing.Point(126, 409);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 21);
+            this.label5.Size = new System.Drawing.Size(60, 21);
             this.label5.TabIndex = 17;
-            this.label5.Text = "Remove Hours";
+            this.label5.Text = "EditPay";
             // 
             // button4
             // 
